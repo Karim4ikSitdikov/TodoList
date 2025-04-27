@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой To-Do Лист</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Мой День</h1>
+            <p id="date"></p>
+        </header>
+
+        <div class="quote-container">
+            <div class="quote-content">
+                <p id="dailyQuote">Загрузка цитаты...</p>
+                <p id="quoteAuthor"></p>
+            </div>
+            <button id="refreshQuote" title="Обновить цитату"><i class="fas fa-sync-alt"></i></button>
+        </div>
+        
+        <div class="input-container">
+            <input type="text" id="taskInput" placeholder="Добавьте новую задачу...">
+            <button id="addTaskBtn"><i class="fas fa-plus"></i></button>
+        </div>
+        
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">Все</button>
+        </div>
+        
+        <ul id="taskList"></ul>
+        <div class="completed-section">
+            <h2><i class="fas fa-check-circle"></i> Завершенные задачи</h2>
+            <ul id="completedList"></ul>
+        </div>
+        
+        <div class="stats">
+            <span id="tasksLeft">0 задач осталось</span>
+            <button id="clearCompleted">Очистить завершенные</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
